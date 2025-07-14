@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+/* Hero Section - UNCHANGED */
+.hero {
+  background-image: url('./assets/1.png');
+  background-size: cover;
+  width: 100%;
+  height: 90vh;    
+  display: flex;    
+  align-items: center;
+  background-color:rgb(239, 222, 156);
+  flex-direction: column;
+  gap: 8vh;
+}
+
+.Navbar{
+  width: 85%;
+  height: 7vh;    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+.logo{
+  img{
+    width: 5vw;
+    height: 5vh;
+  }
+}
+
+.hero-section-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  h1{
+    font-size: 5.5rem;
+  }
+
+  p{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  a{
+    background-color: #00997c;
+    font-size: 1.5rem;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+  }
+
+  span{
+    font-size: 1.5rem;
+  }
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.feature-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-img img {
+  width: 500px;
+  height: auto;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.feature-text p {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.btn.small {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background-color: #00704a;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.small:hover {
+  background-color: #005c3d;
+}
+
+/* ADVANTAGES */
+.advantages {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: white;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.advantage {
+  text-align: center;
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+.advantage img {
+  margin-bottom: 10px;
+}
+
+/* MAP SECTION */
+.map-section {
+  padding: 60px 20px;
+  background-color: #fff0f3;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #111;
+}
+
+.map-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  padding-left: 200px;
+  padding-right: 280px;
+}
+
+.map-image img {
+  width: 100%;
+  max-width: 1050px;
+  height: auto; 
+}
+
+.map-details {
+  max-width: 250px;
+  text-align: left;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.stats li {
+  margin-bottom: 25px;
+}
+
+.stats li strong {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stats li span {
+  font-size: 1rem;
+  color: #444;
+}
+
+.server-link {
+  display: block;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #00997c;
+  text-decoration: none;
+}
+
+.server-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 992px) {
+  .feature-row,
+  .feature-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-img img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .advantages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .feature-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn.small {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .map-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats {
+    font-size: 1rem;
+  }
+
+  .stats li strong {
+    font-size: 1.4rem;
+  }
+
+  .Navbar {
+    padding-right: 0;
+  }
+}
